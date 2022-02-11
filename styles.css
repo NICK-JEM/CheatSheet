@@ -1,0 +1,85 @@
+header {
+    text-align: center;
+  }
+  
+  body {
+    background: linear-gradient(ivory, #ffefd5, #ffe3cf, ivory, #ffefd5, #ffe3cf);
+    font-family: Trebuchet MS;
+  }
+  
+  p {
+    text-align: justify;
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+  
+  h1, h2 {
+    background-color: teal;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    border-style: groove;
+    border-radius: 10px;
+    color: #FFFAFA;
+  
+  }
+  h3 {
+    text-decoration: underline;
+    padding-left: 2vh;
+  }
+  
+  h4 {
+    font-style: italic;
+  }
+  
+  #semantics, #inlineElements, #combinators {
+    margin-bottom: 5vh;
+    padding: 6px;  
+    background-color: #F0FFFF;
+    border-style: inset;
+    border-color: beige;
+    border-radius: 5px;
+  }
+  address {
+    margin-left: 2vh;
+  }
+  code {
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 2vh;
+    background-color: paleturquoise;
+    font-weight: bolder;
+  }
+  
+  nav > a {
+    padding: 5vw;
+    font-weight: bold;
+    font-family: Helvetica;
+    color: turquoise;
+  }
+  
+  table {
+    margin-left: 15vw;
+    margin-right:15vw;
+  }
+  tr {
+    border-style: solid;
+    background-color: paleturquoise;
+  }
+  
+  td {
+    width: 25vh;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  footer {
+    padding-bottom: 2vh;
+  }
+  
+  footer > p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: teal;
+  }
+  

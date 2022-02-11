@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <header>
+      <nav>
+        <a href="#semantics">HTML Semantics</a>
+        <a href="#inlineElements">HTML Inline Elements</a>
+        <a href="#combinators">CSS Combinators</a>
+      </nav>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  
+  <body>
+    <h1>My Cheatsheet</h1>
+
+    <p>Learning to build websites can be frustrating, especially when you want it to look and function a certain way but can't recall the correct syntax. That is why writing your own cheatsheet makes perfect sense! <br><br>So below are a few examples of syntax rules for HTML and CSS that are always useful to remember:</p>
+
+    <section id="semantics">
+    <h2>HTML Semantic and Unsemantic Tags</h2>
+
+    <p>Semantic tags are a naming convention for HTML elements where the writer uses a descriptive identifier for the content inside the element, without being too specific or too vague. This naming convention improves readability for screen reader programs or other developers and prevents a lot of wasted time changing multiple element names in the event of a future redesign.</p>
+    <h3>Semantic</h3>
+    <ul>
+      <li>
+        <h4>&ltarticle&gt tag</h4>
+        <p>Using the &ltarticle&gt tag in place of a &ltdiv&gt tag for the main informational part of a webpage shows developers what the section will contain without specifying any information.</p>
+      </li>
+      <li>
+        <h4>"success" class</h4>
+        <p>labelling a message as success or similar allows the developer to see that the element should contain a positive confirmation message which displays to the user. An improvement on this would be adding a minor descriptive term, e.g "successText" to fully convey the intent without specifying any information.</p>
+      </li>
+      <li>
+        <h4>"priority_1" class</h4>
+        <p>This may seem too specific, however many companies like to specify an elements importance in realtion to other elements. (e.g button importance). So while it looks unsemantic, it is a common convention.</p>
+      </li>
+    </ul>
+    <h3>Unsemantic</h3>
+    <ul>
+      <li>
+        <h4>"normal" class</h4>
+        <p>The use of any name like "normal" is too open to interpretation, and therefore make no real description of the content inside an element. it is better to use the standard HTML tag names for elements you consider "normal".</p>
+      </li>
+      <li>
+        <h4>"left" class</h4>
+        <p>This name is far too specific and in any future redesign, if you change the content to "right" (for example left aligned to right aligned) all uses of "left" would have to be changed. Best to use "alignment" for any align related elements to reduce potential edit time.</p>
+      </li>
+      <li>
+        <h4>"introp" id</h4>
+        <p>As explained in an example found on a CSS/HTML semantics website, use of "introp" clearly means "introduction paragraph", however it is not a good idea to include the element being named.</p>
+      </li>
+    </ul>
+    </section>
+
+    <section id="inlineElements">
+    <h2>HTML Inline Elements</h2>
+
+    <p>Inline elements are those applied directly inside another element, applying an additional effect. Some examples of these are:</p>
+    <ul>
+      <li>
+        <h4>&ltspan&gt</h4>
+        <p>An "inline container" used to group elements.</p>
+        <code><span style="color: red">&ltspan</span> style="color: blue"<span style="color: red">&gt</span>Style this text<span style="color: red">&lt/span&gt</span>.</code>
+        <p>The font inside the element where span has been used will be <span style="color: blue">styled to blue</span>.</p>
+      </li>
+      <li>
+        <h4>&ltmark&gt</h4>
+        <p>Used to highlight a section of text</p>
+        <code><span style="color: red">&ltmark&gt</span>Highlight this text<span style="color: red">&lt/mark&gt</span></code>
+        <p>The text inside the element will be <mark>highlighted yellow</mark> (as default).</p>
+      </li>
+      <li>
+        <h4>&ltsub&gt, &ltsup&gt</h4>
+        <p>The sub tag will convert the contents to a subscript while the sup tag will convert to a superscript.</p>
+        <code>x<span style="color: red">&ltsub&gt</span>2<span style="color: red">&lt/sub&gt</span>   AND   x<span style="color: red">&ltsup&gt</span>2<span style="color: red">&lt/sup&gt</span></code>
+        <p>The text using sub will read x<sub>2</sub> while the text using sup will read x<sup>2</sup>.</p>
+      </li>
+      <li>
+        <h4>&ltaddress&gt</h4>
+        <p>Used to separate address information from the surrounding content. while it doesn't appear to have a different function to styling the address in italics, it can be quickly identified by screenreaders and other programmers by using this tag. largely a semantic use.</p>
+        <code><span style="color: red">&ltaddress&gt</span> 7 Spinsters Box, Drychute Road, Lonelee <span style="color: red">&lt/address&gt</span></code>
+        <p> The address will be on a separate line<address>And looks like this when inside a p element</address></p>
+      </li>
+      <li>
+        <h4>&ltcode&gt</h4>
+        <p>The code tag will change the text to "code format". the box below is using the code tag (with additional CSS styling).</p>
+        <code><span style="color: red">&ltcode&gt</span>example of use<span style="color: red">&lt/code&gt</span></code>
+      </li>
+    </ul>
+    </section>
+
+    <section id="combinators">
+    <h2>CSS Combinators</h2>
+    <p>"Combinators" are the syntax used to write multiple selectors for styling multiple elements, and the combinator needed is dependent on the hierarchy of the elements in the HTML.</p>
+    <table>
+      <tr>
+        <th>Name of Combinator</th>
+        <th>Explanation</th>
+        <th>Syntax</th>
+      </tr>
+      <tr>
+        <td>Adjacent Sibling</td>
+        <td>Specifies that both elements selected have the same parent and that B immediately follows A</td>
+        <td><strong>A + B {  }</strong></td>
+      </tr>
+      <tr>
+        <td>General Sibling</td>
+        <td>Specifies that both elements selected share the same parent, and that A comes before B somewhere.</td>
+        <td><strong>A ~ B {  }</strong></td>
+      </tr>
+      <tr>
+        <td>Child</td>
+        <td>Specifies element B is the direct child of element A. </td>
+        <td><strong>A &gt B {  }</strong></td>
+      </tr>
+      <tr>
+        <td>Descendant</td>
+        <td>Specifies that element B is a descendant of A but not necessarily a direct child.</td>
+        <td><strong>A B {  }</strong></td>
+      </tr>
+      <tr>
+        <td>Column</td>
+        <td>Specifies that element B is located within the table column specified by A. elements spanning multiple columns are considered members of ALL these columns.</td>
+        <td><strong>A || B {  }</strong></td>
+      </tr>
+    </table>
+    </section>
+  </body>
+  
+  <footer>
+      <p>Author: Jack McCann</p>
+      <p><time datetime="2022-02-10" pubdate> Published 10-02-2022</time></p>
+  </footer>
+
+</html>
